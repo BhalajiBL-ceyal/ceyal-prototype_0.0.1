@@ -1,0 +1,29 @@
+/* connector line style */
+.connector {
+  width: 6px;
+  height: 36px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, rgba(99,102,241,.12), rgba(99,102,241,.02));
+  box-shadow: none;
+  transition: box-shadow .2s, background .2s;
+}
+.connector-glow {
+  background: linear-gradient(180deg, rgba(99,102,241,1), rgba(99,102,241,.3));
+  box-shadow: 0 6px 18px rgba(99,102,241,.28), 0 0 12px rgba(99,102,241,.12);
+  animation: glowPulse 1.2s ease-in-out infinite;
+}
+.connector-deviated {
+  background: linear-gradient(180deg, rgba(239,68,68,1), rgba(239,68,68,.2));
+  box-shadow: 0 6px 18px rgba(239,68,68,.28);
+}
+@keyframes glowPulse {
+  0% { transform: translateY(0) scaleY(1); opacity: .95 }
+  50% { transform: translateY(0) scaleY(1.06); opacity: 1 }
+  100% { transform: translateY(0) scaleY(1); opacity: .95 }
+}
+/* flash highlight */
+.flash-highlight { animation: flashIt .9s ease; }
+@keyframes flashIt { 0% { box-shadow: 0 0 0 rgba(34,197,94,0.0) } 50% { box-shadow: 0 0 18px rgba(34,197,94,.28) } 100% { box-shadow: 0 0 0 rgba(34,197,94,0.0) } }
+
+/* deviated node red glow */
+.deviated-node { box-shadow: 0 10px 30px rgba(239,68,68,0.12) !important; border-color: rgba(239,68,68,0.4) !important; }
